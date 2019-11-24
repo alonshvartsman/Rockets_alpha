@@ -1,6 +1,6 @@
 class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :home
+  skip_before_action :authenticate_user!, only: :index
 
   def new
     @spaceship = Spaceship.new
