@@ -12,11 +12,11 @@
       <% @spaceships.each do |f| %>
       <div class="card">
         <div class="card-image">
-          <img class="spaceship-images" src="<%= f.photo_url %>" alt="image icon">
+        <%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %>
         </div>
         <div class="card-text">
-          <h3 class="card-name"><%= f.name %></h2>
-          <h5 class="card-address"><%= f.launch_site %></h4>
+          <h2 class="card-name"><%= f.name %></h2>
+          <h4 class="card-address"><%= f.launch_site %></h4>
           <p><%= f.cost %></p>
           </div>
           <div class="card-actions">
