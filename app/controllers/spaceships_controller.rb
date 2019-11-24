@@ -1,11 +1,16 @@
 class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
+
   def new
     @spaceship = Spaceship.new
   end
 
   def index
     @spaceships = Spaceship.all
+  end
+
+  def show
+    @spaceship = Spaceship.find(params[:id])
   end
 
   def create
@@ -15,9 +20,6 @@ class SpaceshipsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit
