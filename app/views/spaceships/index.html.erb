@@ -9,17 +9,18 @@
 
   <div class="row">
     <div class="cards">
-      <% @spaceships.each do |f| %>
+      <% @spaceships.each do |spaceship| %>
       <div class="card">
         <div class="card-image">
-          <img  class="spaceship-images" src="<%= f.photo %>" alt="image icon">
+        <%= cl_image_tag spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %>
         </div>
         <div class="card-text">
-          <h3 class="card-name"><%= f.name %></h3>
-          <h5 class="card-address"><%= f.launch_site %></h5>
-          <p><%= f.cost %></p>
+          <h2 class="card-name"><%= spaceship.name %></h2>
+          <h4 class="card-address"><%= spaceship.launch_site %></h4>
+          <p><%= spaceship.cost %></p>
+          </div>
           <div class="card-actions">
-            <p><%= link_to "More info", spaceship_path(f) %></p>
+            <p><%= link_to "More info", spaceship_path(spaceship) %></p>
           </div>
         </div>
       </div>
