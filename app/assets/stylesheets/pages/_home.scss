@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+.row {
+  display: flex;
+}
+
+
+@media(max-width: 1700px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+  }
+}
+
+@media(max-width: 575px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+  }
+}
+
+.card {
+  border: solid;
+  border-width: 1px;
+  border-color: beige;
+}
+
+.bitch-iamges {
+  height: 180px;
+  background-position: center;
+  background-size: cover
+}

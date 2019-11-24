@@ -1,2 +1,30 @@
-<h1>Spaceships#index</h1>
-<p>Find me in app/views/spaceships/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <h2>All Spaceships</h2>
+  </div>
+
+  <div class="row">
+    <h4>All <%= @spaceships.length %> Spaceships</h4>
+  </div>
+
+  <div class="row">
+    <div class="cards">
+      <% @spaceships.each do |f| %>
+      <div class="card">
+        <!-- <div class="card-image">
+          <img  class="spaceship-images" src="<%= f.picture_url %>" alt="image icon">
+        </div> -->
+        <div class="card-text">
+          <h3 class="card-name"><%= f.name %></h2>
+          <h5 class="card-address"><%= f.launch_site %></h4>
+          <p><%= f.cost %></p>
+          </div>
+          <div class="card-actions">
+            <p><%= link_to "More info", spaceship_path(f) %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
