@@ -1,2 +1,8 @@
-<h1>Spaceships#show</h1>
-<p>Find me in app/views/spaceships/show.html.erb</p>
+
+<h1><%= @spaceship.name %></h1>
+<p><%= @spaceship.cost %></p>
+<p><%= @spaceship.launch_site %></p>
+<%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
+<%=link_to "Delete this spaceship", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
+<%= link_to "back to main page", spaceships_path %>
+
