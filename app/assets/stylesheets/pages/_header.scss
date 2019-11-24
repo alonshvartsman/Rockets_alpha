@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 .banner {
-  background-image: url(https://wallpapersite.com/images/pages/pic_h/14678.jpg);
+  background-image: url(https://wallpapersite.com/images/pages/pic_w/18307.jpg);
   background-size: cover;
   background-position: center;
   padding: 200px 0;
@@ -11,8 +12,9 @@
   }
 
 .banner h1 {
-    color: black;
+    color: white;
     font-size: 55px;
+    font-family: 'Poiret One', cursive;
   }
 
 .banner p {
@@ -27,7 +29,6 @@
 
 .btn-primary {
   display: inline-block;
-  background-image: url(http://images6.fanpop.com/image/photos/38600000/Galaxies-the-universe-38674728-1600-900.jpg);
   color: #FFFFFF;
   padding: 16px 36px;
   border-radius: 50px;
@@ -39,5 +40,4 @@
 .btn-primary:hover {
   border-color: black;
   background-position: center;
-  background-image: url(http://images6.fanpop.com/image/photos/38600000/Galaxies-the-universe-38674728-1600-900.jpg)
 }
