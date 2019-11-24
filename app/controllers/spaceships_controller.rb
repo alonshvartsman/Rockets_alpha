@@ -1,5 +1,6 @@
 class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: :home
 
   def new
     @spaceship = Spaceship.new
@@ -15,6 +16,7 @@ class SpaceshipsController < ApplicationController
 
   def create
     @spaceship = Spaceship.new(spaceship_params)
+    @spaceship.user = current_user
     if @spaceship.save
       redirect_to @spaceship, notice: 'Spaceship was successfully created.'
     else
