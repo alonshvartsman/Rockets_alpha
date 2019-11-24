@@ -11,14 +11,13 @@
     <div class="cards">
       <% @spaceships.each do |f| %>
       <div class="card">
-        <!-- <div class="card-image">
-          <img  class="spaceship-images" src="<%= f.picture_url %>" alt="image icon">
-        </div> -->
+        <div class="card-image">
+          <img  class="spaceship-images" src="<%= f.photo %>" alt="image icon">
+        </div>
         <div class="card-text">
-          <h3 class="card-name"><%= f.name %></h2>
-          <h5 class="card-address"><%= f.launch_site %></h4>
+          <h3 class="card-name"><%= f.name %></h3>
+          <h5 class="card-address"><%= f.launch_site %></h5>
           <p><%= f.cost %></p>
-          </div>
           <div class="card-actions">
             <p><%= link_to "More info", spaceship_path(f) %></p>
           </div>
