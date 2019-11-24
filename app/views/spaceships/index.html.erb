@@ -1,3 +1,11 @@
+<div class="banner">
+  <div class="container">
+    <h1>Welcome to your first trip to the <span id="stars">Stars</span></h1>
+    <p>Curated by Spaceships4U</p>
+    <a class="btn-primary" href="#">Fly now!</a>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <h2>All Spaceships</h2>
@@ -19,7 +27,7 @@
           <h4 class="card-address"><%= spaceship.launch_site %></h4>
           <p><%= spaceship.cost %></p>
           <div class="card-actions">
-            <%=link_to "Delete this spaceship", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%>
+            <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
             <p><%= link_to "More info", spaceship_path(spaceship) %></p>
           </div>
         </div>
