@@ -32,7 +32,7 @@ class SpaceshipsController < ApplicationController
     redirect_to spaceship_path(@spaceship)
   end
 
-  def delete
+  def destroy
     @spaceship.destroy
     redirect_to spaceships_url, notice: 'Spaceship was successfully destroyed.'
   end
