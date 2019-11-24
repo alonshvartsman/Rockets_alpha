@@ -19,6 +19,7 @@
           <h4 class="card-address"><%= spaceship.launch_site %></h4>
           <p><%= spaceship.cost %></p>
           <div class="card-actions">
+            <%=link_to "Delete this spaceship", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%>
             <p><%= link_to "More info", spaceship_path(spaceship) %></p>
           </div>
         </div>
