@@ -4,4 +4,5 @@ class Spaceship < ApplicationRecord
   validates :name, presence: true
   validates :cost, presence: true
   validates :launch_site, presence: true
+  mount_uploader :photo, PhotoUploader
 end
