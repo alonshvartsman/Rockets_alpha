@@ -1,2 +1,26 @@
-<h1>Spaceships#new</h1>
-<p>Find me in app/views/spaceships/new.html.erb</p>
+<h1>Rent your spaceship</h1>
+<p>Earn money as a spaceship host!</p>
+
+<div class="d-flex">
+  <div class="container">
+    <div class="banner">
+<div class="row">
+  <div class="col-12 col-lg-4 bg-info p-4 mt-3 bx-shadow-2">
+    <h1>Add your Spaceship</h1>
+    <%= simple_form_for (@spaceship) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :cost %>
+      <%= f.input :launch_site %>
+    </div>
+    <div class="form-actions">
+      <%= f.submit class: "btn btn-warning" %>
+    </div>
+    <% end %>
+<%= link_to "⬅️Home", root_path, class: "underline" %>
+
+    </div>
+  </div>
+</div>
+</div>
+
