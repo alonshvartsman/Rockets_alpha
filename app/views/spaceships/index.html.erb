@@ -2,8 +2,9 @@
 <div class="banner_home">
   <div class="container">
     <h1 id="banner_h">REACH FOR THE SKY</h1>
-    <a class="btn-primary" href="#">Sign up now!</a>
-  </div>
+  <% if !current_user %>
+    <%= link_to “Sign up now!“, new_user_session_path %>
+    <% end %>  </div>
 </div>
 
 <div class="contain">
@@ -14,6 +15,8 @@
     <div class="cards">
     <% @spaceships.each do |spaceship| %>
       <div class="card">
+        <div class="card_link">
+    <%= link_to spaceship_path(spaceship) do %>
         <div class="card-image">
         <%= cl_image_tag spaceship.photo %>
         </div>
@@ -22,8 +25,10 @@
           <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
           <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
         </div>
+        <% end %>
+        </div>
         <div class="card-actions">
-          <p><%= link_to "More info", spaceship_path(spaceship) %></p>
+
           <% if current_user && policy(spaceship).edit? %>
             <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
           <% end %>
