@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
-.banner {
+
+.banner-home {
   background-image: url(https://wallpapersite.com/images/pages/pic_w/18307.jpg);
   background-size: cover;
   background-position: center;
@@ -11,19 +12,19 @@
   margin: auto;
   }
 
-.banner h1 {
+.banner-home h1 {
     color: white;
     font-size: 55px;
     font-family: 'Poiret One', cursive;
   }
 
-.banner p {
+.banner-home p {
   color: white;
   font-size: 15px;
 }
 
-#mars {
-  color: #FFFFFF;
+#stars {
+  color: red;
   font-size: 75px;
 }
 
