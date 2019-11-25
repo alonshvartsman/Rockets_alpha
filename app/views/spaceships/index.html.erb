@@ -1,44 +1,55 @@
 <div class="banner_home">
   <div class="container">
-    <h1>Welcome to your first trip to the <span id="stars">Stars</span></h1>
+    <h1 id="banner_h">REACH FOR THE SKY</h1>
     <a class="btn-primary" href="#">Sign up now!</a>
   </div>
 </div>
-<div class="gradient">
-  <div class="contain">
-    <div class="row">
-      <h2>All Spaceships</h2>
-    </div>
-    <div class="row">
-      <h4>All <%= @spaceships.length %> Spaceships</h4>
-    </div>
-    <div class="row">
-      <div class="cards">
-      <% @spaceships.each do |spaceship| %>
-        <div class="card">
-          <div class="card-image">
-          <%= cl_image_tag spaceship.photo %>
-          </div>
-          <div class="card-text">
-            <h3 class="card-name"><%= spaceship.name %></h3>
-            <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
-            <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
-          </div>
-          <div class="card-actions">
-            <p><%= link_to "More info", spaceship_path(spaceship) %></p>
-            <% if current_user && policy(spaceship).edit? %>
-              <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
-            <% end %>
-            <% if current_user && policy(spaceship).destroy? %>
-              <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
-            <% end %>
-          </div>
+
+<div class="contain">
+  <div class="row">
+    <h2>All <%= @spaceships.length %> Spaceships</h2>
+  </div>
+  <div class="row">
+    <div class="cards">
+    <% @spaceships.each do |spaceship| %>
+      <div class="card">
+        <div class="card-image">
+        <%= cl_image_tag spaceship.photo %>
         </div>
-        <% end %>
-        <% if policy(Spaceship).create? %>
-          <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
-        <% end %>
+        <div class="card-text">
+          <h3 class="card-name"><%= spaceship.name %></h3>
+          <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
+          <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
+        </div>
+        <div class="card-actions">
+          <p><%= link_to "More info", spaceship_path(spaceship) %></p>
+          <% if current_user && policy(spaceship).edit? %>
+            <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
+          <% end %>
+          <% if current_user && policy(spaceship).destroy? %>
+            <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
+          <% end %>
+        </div>
       </div>
+      <% end %>
+      <% if policy(Spaceship).create? %>
+        <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+      <% end %>
     </div>
   </div>
 </div>
+
+
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/office.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">This is a link</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
