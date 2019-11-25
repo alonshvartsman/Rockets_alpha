@@ -9,4 +9,5 @@
 <% if current_user && policy(@spaceship).edit? %>
 <%=link_to "Edit", edit_spaceship_path(@spaceship)%> <br>
 <% end %>
+<%= link_to 'book a seat Today!', new_spaceship_booking_path(@spaceship) %> <br>
 <%= link_to "back to main page", spaceships_path %>
