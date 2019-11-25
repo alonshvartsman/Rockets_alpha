@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   resources :spaceships do
     resources :bookings
   end
+    namespace :admin do
+    resources :spaceships, only: [:index] do
+      resources :bookings, only: [:index]
+    end
+  end
 end

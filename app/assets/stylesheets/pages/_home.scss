@@ -23,9 +23,11 @@
     grid-gap: 24px;
   }
 }
+
 .container {
   margin-bottom: 48px;
 }
+
 .card {
   border: solid;
   border-width: 1px;
@@ -34,12 +36,14 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   position: relative;
 }
+
 .card-image img {
   height: 180px;
   width: 331px;
   background-position: center;
   background-size: cover;
 }
+
 .card-text {
   padding-left: 10px;
 }
@@ -58,6 +62,30 @@
 .card-actions .delete_action a:hover {
   color: red;
 }
+
+.card-text {
+  padding-left: 10px;
+}
+
+.text-topic {
+  opacity: .8;
+}
+
+.card-name {
+  margin-top: 5px;
+}
+
+.card-address {
+  margin: 0px;
+}
+
+.card-actions a {
+  color: white;
+}
+
+.card-actions .delete_action a:hover {
+  color: red;
+}
 .card-actions {
   display: flex;
   justify-content: space-around;
@@ -65,4 +93,5 @@
   color: white;
   padding-top: 7px;
   background-color: #ED950E;
+  background-color: #ed950e;
 }

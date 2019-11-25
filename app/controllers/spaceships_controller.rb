@@ -1,13 +1,14 @@
 class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def new
     @spaceship = Spaceship.new
+    authorize @spaceship
   end
 
   def index
-    @spaceships = Spaceship.all
+    @spaceships = policy_scope(Spaceship).order(created_at: :desc)
   end
 
   def show
@@ -17,6 +18,7 @@ class SpaceshipsController < ApplicationController
   def create
     @spaceship = Spaceship.new(spaceship_params)
     @spaceship.user = current_user
+    authorize @spaceship
     if @spaceship.save
       redirect_to @spaceship, notice: 'Spaceship was successfully created.'
     else
@@ -41,6 +43,7 @@ class SpaceshipsController < ApplicationController
 
   def set_spaceship
     @spaceship = Spaceship.find(params[:id])
+    authorize @spaceship
   end
 
   def spaceship_params
