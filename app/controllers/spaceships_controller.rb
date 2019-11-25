@@ -1,6 +1,6 @@
 class SpaceshipsController < ApplicationController
   before_action :set_spaceship, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def new
     @spaceship = Spaceship.new
@@ -44,7 +44,6 @@ class SpaceshipsController < ApplicationController
   def set_spaceship
     @spaceship = Spaceship.find(params[:id])
     authorize @spaceship
-
   end
 
   def spaceship_params

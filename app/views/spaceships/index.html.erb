@@ -8,7 +8,6 @@
 <div class="container">
   <div class="row">
     <h2>All Spaceships</h2>
-    <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
   </div>
 
   <div class="row">
@@ -26,8 +25,12 @@
           <p class="card-address"><%= spaceship.launch_site %></p>
           <p>Ticket Price: <%= spaceship.cost %>$</p>
           <div class="card-actions">
+            <% if current_user && policy(spaceship).destroy? %>
             <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
+            <% end %>
+            <% if current_user && policy(spaceship).edit? %>
             <%=link_to "Edit this spaceship", edit_spaceship_path(spaceship)%> <br>
+            <% end %>
             <p><%= link_to "More info", spaceship_path(spaceship) %></p>
           </div>
         </div>
