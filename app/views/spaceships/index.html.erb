@@ -20,7 +20,7 @@
       <% @spaceships.each do |spaceship| %>
       <div class="card">
         <div class="card-image">
-        <%= cl_image_tag spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %>
+        <%= cl_image_tag spaceship.photo %>
         </div>
         <div class="card-text">
           <h2 class="card-name"><%= spaceship.name %></h2>
