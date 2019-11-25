@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     if @booking.save
-      redirect_to spaceship_path(@spaceship)
+      redirect_to dashboard_path
     else
       render :new
     end
