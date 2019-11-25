@@ -1,7 +1,11 @@
-<div class="banner">
+
+<div class="banner_home">
   <div class="container">
+    <%= image_tag "LOGO.png", class: "logohome" %>
     <h1>Welcome to your first trip to the <span id="stars">Stars</span></h1>
-    <a class="btn-primary" href="#">Sign up now!</a>
+    <% if !current_user %>
+    <%= link_to "Sign up now!", new_user_session_path %>
+    <% end %>
   </div>
 </div>
 <div class="gradient">
@@ -41,6 +45,7 @@
         <% if policy(Spaceship).create? %>
         <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
         <% end %>
+
       </div>
     </div>
   </div>

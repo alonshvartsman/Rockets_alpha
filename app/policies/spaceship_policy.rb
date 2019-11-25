@@ -21,6 +21,10 @@ class SpaceshipPolicy < ApplicationPolicy
     owner_or_admin?
   end
 
+  def dashboard?
+    true
+  end
+
   private
 
   def owner_or_admin?

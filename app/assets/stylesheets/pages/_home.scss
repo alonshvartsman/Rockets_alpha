@@ -7,7 +7,6 @@ a:hover {
   text-decoration: none;
 }
 
-
 @media(max-width: 1700px) {
   .cards {
     display: grid;
@@ -15,7 +14,6 @@ a:hover {
     grid-gap: 24px;
   }
 }
-
 @media(max-width: 1200px) {
   .cards {
     display: grid;
@@ -23,7 +21,6 @@ a:hover {
     grid-gap: 24px;
   }
 }
-
 @media(max-width: 575px) {
   .cards {
     display: grid;
@@ -56,6 +53,25 @@ a:hover {
   color: white;
   padding-left: 10px;
 }
+.text-topic {
+  opacity: .8;
+}
+.card-name {
+  margin-top: 5px;
+}
+.card-address {
+  margin: 0px;
+}
+.card-actions a {
+  color: white;
+}
+.card-actions .delete_action a:hover {
+  color: red;
+}
+
+.card-text {
+  padding-left: 10px;
+}
 
 .text-topic {
   opacity: .8;
@@ -76,12 +92,16 @@ a:hover {
 .card-actions .delete_action a:hover {
   color: red;
 }
-
 .card-actions {
   display: flex;
   justify-content: space-around;
   text-align: center;
   color: white;
   padding-top: 7px;
+  background-color: #ED950E;
   background-color: #ed950e;
+}
+
+.logohome {
+  width: 150px;
 }

@@ -10,10 +10,11 @@
 <p><%= @spaceship.cost %></p>
 <p><%= @spaceship.launch_site %></p>
 <% if current_user && policy(@spaceship).destroy? %>
-<%=link_to "Delete this spaceship", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
+<%=link_to "Delete", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
 <% end %>
 <% if current_user && policy(@spaceship).edit? %>
-<%=link_to "Edit this spaceship", edit_spaceship_path(@spaceship)%> <br>
+<%=link_to "Edit", edit_spaceship_path(@spaceship)%> <br>
 <% end %>
+<%= link_to 'book a seat Today!', new_spaceship_booking_path(@spaceship) %> <br>
 <%= link_to "back to main page", spaceships_path %>
  -->

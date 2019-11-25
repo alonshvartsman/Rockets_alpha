@@ -1,0 +1,51 @@
+.new-form-background {
+  background-image: url(https://images.unsplash.com/photo-1457364887197-9150188c107b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 1498px;
+}
+
+.banner h1 {
+    color: black;
+    font-size: 55px;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+  }
+
+.banner h3 {
+  text-align: center;
+}
+
+.banner p {
+  color: black;
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+#stars {
+  color: red;
+  font-size: 75px;
+}
+
+.btn-primary {
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 16px 36px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin-top: 18px;
+  font-size: 20px;
+}
+
+.btn-primary:hover {
+  border-color: black;
+  background-position: center;
+}
+
+.form-inputs a {
+  padding-left: 230px;
+}
+
+.logoform {
+  height: 187px;
+}
