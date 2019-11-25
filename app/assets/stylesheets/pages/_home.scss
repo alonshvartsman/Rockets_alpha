@@ -3,6 +3,11 @@
   display: flex;
   justify-content: center;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
 @media(max-width: 1700px) {
   .cards {
     display: grid;
@@ -44,6 +49,7 @@
 }
 
 .card-text {
+  color: white;
   padding-left: 10px;
 }
 .text-topic {
@@ -93,4 +99,8 @@
   padding-top: 7px;
   background-color: #c3c3c3;
   background-color: #c3c3c3;
+}
+
+.logohome {
+  width: 150px;
 }

@@ -1,12 +1,20 @@
+<div class="container-show">
+  <div class="row-show">
+    <div class="image_banner">
+      <%= cl_image_tag @spaceship.photo %>
+    </div>
+  </div>
+</div>
 
-<h1><%= @spaceship.name %></h1>
+<!-- <h1><%= @spaceship.name %></h1>
 <p><%= @spaceship.cost %></p>
 <p><%= @spaceship.launch_site %></p>
-<%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
 <% if current_user && policy(@spaceship).destroy? %>
 <%=link_to "Delete", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
 <% end %>
 <% if current_user && policy(@spaceship).edit? %>
 <%=link_to "Edit", edit_spaceship_path(@spaceship)%> <br>
 <% end %>
+<%= link_to 'book a seat Today!', new_spaceship_booking_path(@spaceship) %> <br>
 <%= link_to "back to main page", spaceships_path %>
+ -->
