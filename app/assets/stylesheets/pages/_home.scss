@@ -2,6 +2,11 @@
 .row {
   display: flex;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
 @media(max-width: 1700px) {
   .cards {
     display: grid;
@@ -45,6 +50,7 @@
 }
 
 .card-text {
+  color: white;
   padding-left: 10px;
 }
 .text-topic {
@@ -94,4 +100,8 @@
   padding-top: 7px;
   background-color: #ED950E;
   background-color: #ed950e;
+}
+
+.logohome {
+  width: 150px;
 }
