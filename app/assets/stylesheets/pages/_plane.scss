@@ -1,0 +1,286 @@
+$seatColor:#757575;
+$seatColorSelected:#176cff;
+$seatDisabled:#cc6262;
+
+body{
+  min-height:100vh;
+  background-color:#f5f5f5;
+  font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+  font-size:15px;
+  perspective:900px;
+  transform-style:preserve-3d;
+}
+
+.plane{
+  transform-style:preserve-3d;
+  position: relative;
+  margin-left: -650px;
+}
+
+.cabin{
+  max-width:500px;
+  min-width:450px;
+  background-color:#e0e0e0;
+  width:80vw;
+  margin:25px auto;
+  transition:transform 1s ease;
+  transform:rotateX(0deg) translateZ(-500px) translateY(-200px);
+  transform-style:preserve-3d;
+  &:hover{
+    transform:rotateX(40deg) translateZ(100px) translateY(00px);
+  }
+}
+
+.seat-row {
+  display:flex;
+  transform-style:preserve-3d;
+  transition:background-color .24s ease;
+  &:hover{
+    background-color:rgba(255,255,255,.5);
+    .aisle-number{
+      background-color:$seatColorSelected;
+      transform:translateX(-50%) translateY(-50%) translateZ(3px);
+      box-shadow:0px 3px 0 0 darken($seatColorSelected,30%);
+    }
+  }
+  .seat{
+    width:48px;
+    height:48px;
+    margin:9px;
+  }
+}
+
+.label-plane{
+  background-color:$seatColor;
+  display:block;
+  height:100%;
+  position:relative;
+
+}
+
+.seat-label{
+  display:block;
+  height:100%;
+  font-size:0;
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    width:15%;
+    height:40%;
+    z-index:10;
+    top:50%;
+    left:50%;
+    position:absolute;
+    border-right:6px solid #fff;
+    border-bottom:6px solid #fff;
+    transform:scale(0) translateZ(15px) rotateZ(40deg) translateX(-100%) translateY(-40%);
+  }
+
+   &:after{
+      content:'';
+      font-size:12px;
+      display:block;
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      background-color:lighten($seatColor,15%);
+      transform:translateZ(12px) scale(1.05);
+      transition:transform .24s ease, background-color .24s ease;
+    }
+
+  &:hover:after{
+    background-color:lighten($seatColor,30%);
+    cursor:pointer;
+  }
+
+  input:disabled + &{
+    background-color:$seatDisabled;
+    &:after{
+      background-color:lighten($seatDisabled,20%);
+      transform:translateZ(6px) scale(1.05);
+    }
+    &:before{
+      width:21px;
+      height:21px;
+      content:"\274C";
+      font-size:21px;
+      transform:translateZ(6px) scale(1.05) translateX(-50%) translateY(-50%);
+      border:0;
+      opacity:.2;
+    }
+    &:active:after{
+      border:3px solid lighten($seatDisabled,10%);
+    }
+  }
+
+  input:checked + &{
+      background-color:$seatColorSelected;
+    &:after{
+      background-color:lighten($seatColorSelected,20%);
+      border:3px solid lighten($seatColorSelected,45%);
+      transform:translateZ(24px) scale(1.05);
+    }
+    &:before{
+      transition:transform .24s ease;
+      transform:scale(1) translateZ(24px) rotateZ(40deg) translateX(-100%) translateY(-40%);
+    }
+  }
+}
+
+.aisle{
+  flex:1;
+  position:relative;
+  .aisle-number{
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 0 0 darken($seatColorSelected,30%);
+    background-color:$seatColor;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    text-align:center;
+    line-height:24px;
+    color:#fff;
+    font-size:11px;
+    transition:background-color .24s ease, transform .24s ease, box-shadow .24s ease;
+  }
+}
+
+.aircraft-details{
+  color:#222;
+  position:fixed;
+  top:12px;
+  left:0;
+  background-color:#fff;
+  border-radius:3px;
+  padding:12px;
+  box-shadow:9px 9px 12px 0 rgba(0,0,0,.1);
+  max-height:24px;
+  max-width:24px;
+  overflow:hidden;
+  transition:max-width .24s ease .24s, max-height .24s ease 0s;
+  &.open{
+    transition:max-width .24s ease 0s, max-height .24s ease .24s;
+    max-height:300px;
+    max-width:240px;
+    .btn-close{
+      transform:scale(1);
+      transition:transform .12s ease .12s;
+    }
+  }
+
+  .btn-close{
+    transform:scale(0);
+    transition:transform .12s ease 0s;
+  }
+
+  table{
+    margin-top:9px;
+  }
+
+  caption{
+    font-weight:500;
+    margin-bottom:6px;
+  }
+
+  th,td{
+    padding:3px;
+    font-size:12px;
+    line-height:1.4;
+  }
+  th{
+    text-align:left;
+    font-weight:500;
+  }
+}
+
+.aircraft-details-actions{
+  display:flex;
+  .btn:first-child{
+    flex:1;
+    text-align:left;
+  }
+}
+
+.btn{
+  border:0;
+  background:none;
+  margin:0;
+  padding:0;
+  &:focus{
+    outline:0;
+  }
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+.icon{
+  display:inline-block;
+  width:24px;
+  height:24px;
+}
+
+.icon-information{
+  background-color:skyblue;
+  border-radius:50%;
+  position:relative;
+  &:after{
+    content:'i';
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-weight:700;
+    font-style:italic;
+    font-size:15px;
+    font-family: "Lucida Bright", Georgia, serif;
+  }
+}
+
+.icon-close{
+  background-color:#c7c7c7;
+  border-radius:3px;
+  position:relative;
+  &:before,
+  &:after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:3px;
+    background-color:#666;
+    height:60%;
+    transform-origin:50%;
+  }
+  &:before{
+    transform:translate(-50%,-50%) rotateZ(45deg);
+  }
+  &:after{
+    transform:translate(-50%,-50%) rotateZ(-45deg);
+  }
+
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+
+.formspacebooking {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}

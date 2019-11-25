@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 .row {
   display: flex;
+  justify-content: center;
 }
 
 a:hover {
@@ -34,19 +35,17 @@ a:hover {
 }
 
 .card {
-  border: solid;
-  border-width: 1px;
-  background-color: #FFA318;
-  color: white;
+  background-color: white;
+  color: black;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   position: relative;
+  border: 0px;
 }
 
 .card-image img {
   height: 180px;
-  width: 331px;
   background-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .card-text {
@@ -66,7 +65,7 @@ a:hover {
   color: white;
 }
 .card-actions .delete_action a:hover {
-  color: red;
+  color: #1B12B2;
 }
 
 .card-text {
@@ -90,7 +89,7 @@ a:hover {
 }
 
 .card-actions .delete_action a:hover {
-  color: red;
+  color: #c7c7c7;
 }
 .card-actions {
   display: flex;
@@ -98,8 +97,8 @@ a:hover {
   text-align: center;
   color: white;
   padding-top: 7px;
-  background-color: #ED950E;
-  background-color: #ed950e;
+  background-color: #c3c3c3;
+  background-color: #c3c3c3;
 }
 
 .logohome {
