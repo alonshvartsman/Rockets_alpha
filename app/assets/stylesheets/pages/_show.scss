@@ -1,6 +1,12 @@
 .image_banner img {
   margin: 0px;
   height: 74vh;
-  width :189vh;
+  width: 120vh;
   object-fit: cover;
+  border-radius: 5px;
+}
+
+.row-show {
+  display: flex;
+  justify-content: space-between;
 }
