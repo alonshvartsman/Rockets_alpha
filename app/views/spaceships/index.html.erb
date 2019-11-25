@@ -1,42 +1,36 @@
-<div class="banner-home">
+<div class="banner">
   <div class="container">
-    <h1>Welcome to your first trip to the <span id="stars">stars</span></h1>
-    <% if !current_user %>
-    <%= link_to "Sign up now", new_user_registration_path, class: "btn-primary" %>
-    <% end %>
+    <h1>Welcome to your first trip to the <span id="stars">Stars</span></h1>
+    <a class="btn-primary" href="#">Sign up now!</a>
   </div>
 </div>
-
 <div class="gradient">
   <div class="contain">
-
     <div class="row">
       <h2>All Spaceships</h2>
     </div>
-
     <div class="row">
       <h4>All <%= @spaceships.length %> Spaceships</h4>
     </div>
-
-    <div class=“row”>
-      <div class=“cards”>
+    <div class="row">
+      <div class="cards">
       <% @spaceships.each do |spaceship| %>
-        <div class=“card”>
-          <div class=“card-image”>
+        <div class="card">
+          <div class="card-image">
           <%= cl_image_tag spaceship.photo %>
           </div>
-          <div class=“card-text”>
-            <h3 class=“card-name”><%= spaceship.name %></h3>
-            <p class=“card-address”><span class=“text-topic”>Launch Site:</span> <%= spaceship.launch_site %></p>
-            <p class=“card-cost”><span class=“text-topic”>Ticket Price:</span> $<%= spaceship.cost %></p>
+          <div class="card-text">
+            <h3 class="card-name"><%= spaceship.name %></h3>
+            <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
+            <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
           </div>
-          <div class=“card-actions”>
+          <div class="card-actions">
             <p><%= link_to "More info", spaceship_path(spaceship) %></p>
             <% if current_user && policy(spaceship).edit? %>
               <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
             <% end %>
             <% if current_user && policy(spaceship).destroy? %>
-              <p class=“delete_action”><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
+              <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
             <% end %>
           </div>
         </div>
