@@ -1,7 +1,9 @@
 <div class="banner-home">
   <div class="container">
     <h1>Welcome to your first trip to the <span id="stars">stars</span></h1>
-    <a class="btn-primary" href="">Sign up now!</a>
+    <% if !current_user %>
+    <%= link_to "Sign up now", new_user_registration_path, class: "btn-primary" %>
+    <% end %>
   </div>
 </div>
 
