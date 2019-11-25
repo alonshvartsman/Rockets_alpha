@@ -23,19 +23,18 @@
         <%= cl_image_tag spaceship.photo %>
         </div>
         <div class="card-text">
-          <h2 class="card-name"><%= spaceship.name %></h2>
-          <p class="card-address">Launch Site: <%= spaceship.launch_site %></p>
-          <p>Ticket Price: $<%= spaceship.cost %></p>
-          <div class="card-actions">
-            <% if current_user && policy(spaceship).destroy? %>
-            <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
-            <%= link_to "More Info", spaceship_path(spaceship) %>
-            <% end %>
-            <% if current_user && policy(spaceship).edit? %>
-            <%=link_to "Edit this spaceship", edit_spaceship_path(spaceship)%> <br>
-            <% end %>
-            <p><%= link_to "More info", spaceship_path(spaceship) %></p>
-          </div>
+          <h3 class="card-name"><%= spaceship.name %></h3>
+          <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
+          <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
+        </div>
+        <div class="card-actions">
+          <p><%= link_to "More info", spaceship_path(spaceship) %></p>
+          <% if current_user && policy(spaceship).edit? %>
+            <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
+          <% end %>
+          <% if current_user && policy(spaceship).destroy? %>
+            <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%></p>
+          <% end %>
         </div>
       </div>
       <% end %>
