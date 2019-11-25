@@ -28,14 +28,36 @@
   }
 }
 
+.container {
+  margin-bottom: 48px;
+}
+
 .card {
   border: solid;
   border-width: 1px;
+  background-color: #FFA318;
+  color: white;
   border-color: beige;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 .card-image img {
   height: 180px;
+  width: 331px;
   background-position: center;
   background-size: cover;
+}
+
+.card-text {
+  padding-left: 7px;
+}
+
+.card-text a {
+  color: white;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 9px;
 }
