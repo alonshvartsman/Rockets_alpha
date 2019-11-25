@@ -4,9 +4,9 @@
 <p><%= @spaceship.launch_site %></p>
 <%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
 <% if current_user && policy(@spaceship).destroy? %>
-<%=link_to "Delete this spaceship", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
+<%=link_to "Delete", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
 <% end %>
 <% if current_user && policy(@spaceship).edit? %>
-<%=link_to "Edit this spaceship", edit_spaceship_path(@spaceship)%> <br>
+<%=link_to "Edit", edit_spaceship_path(@spaceship)%> <br>
 <% end %>
 <%= link_to "back to main page", spaceships_path %>

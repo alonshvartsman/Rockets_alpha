@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
+.rocketnewimage {
+  background-image: url(https://i2.wp.com/www.rocketstem.org/wp-content/uploads/2019/10/blueorigin_newglenn_ascent_web.jpg?ssl=1);
+  background-size: cover;
+  background-position: center;
+  // padding: 242px 0;
+  height: 1498px;
+  }
+
+.rocketnewimage .container {
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+  }
+
+.banner-new h1 {
+    color: white;
+    font-size: 55px;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+  }
+
+.banner-new p {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+#stars {
+  color: red;
+  font-size: 75px;
+}
+
+.btn-primary {
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 16px 36px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin-top: 18px;
+  font-size: 20px;
+}
+
+.btn-primary:hover {
+  border-color: black;
+  background-position: center;
+}
+
+.form-inputs a {
+  padding-left: 230px;
+}
