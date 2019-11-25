@@ -13,7 +13,6 @@
   <div class="row">
     <h4>All <%= @spaceships.length %> Spaceships</h4>
   </div>
-
   <div class="row">
     <div class="cards">
       <% @spaceships.each do |spaceship| %>
@@ -24,7 +23,7 @@
         <div class="card-text">
           <h2 class="card-name"><%= spaceship.name %></h2>
           <h4 class="card-address"><%= spaceship.launch_site %></h4>
-          <p><%= spaceship.cost %></p>
+          <p>$<%= spaceship.cost %> per launch</p>
           <div class="card-actions">
             <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
             <p><%= link_to "More info", spaceship_path(spaceship) %></p>
