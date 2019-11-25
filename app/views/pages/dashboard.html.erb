@@ -1,0 +1,16 @@
+<h1>your spaceships</h1>
+<% @spaceships.each do |spaceship| %>
+<%= spaceship.name %> <br>
+<%= spaceship.cost %> <br>
+<%= spaceship.launch_site %> <br>
+<%= cl_image_tag spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
+<% end %>
+<h1>your bookings</h1>
+<% @bookings.each do |booking| %>
+<% @spaceship = booking.spaceship %>
+<%= booking.date %> <br>
+<%= @spaceship.name %> <br>
+<%= @spaceship.cost %> <br>
+<%= @spaceship.launch_site %> <br>
+<%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
+<% end %>
