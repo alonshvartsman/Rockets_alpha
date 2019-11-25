@@ -6,7 +6,7 @@
     <div class="banner">
       <div class="row">
         <div class="col-12">
-          <h3>Add your Spaceship</h3>
+          <h3>Fill out the form to begin renting out your spaceship</h3>
           <%= simple_form_for (@spaceship) do |f| %>
           <% if @spaceship.errors.any? %>
           <div class="errors-container">
@@ -18,6 +18,8 @@
           </div>
           <% end %>
           <div class="form-inputs">
+            <h3 id="spaceship-details">Add your spaceship's details below</h3>
+            <%= image_tag "accelerate-dribbble.gif", class: "avatar-createspaceship" %>
             <%= f.input :name %>
             <%= f.input :cost %>
             <%= f.input :launch_site %>
@@ -25,11 +27,10 @@
             <%= f.input :photo_cache, as: :hidden %>
           </div>
           <div class="form-actions">
-            <%= f.submit class: "btn btn-warning", value:"List Spaceship" %>
+            <%= f.submit class: "", value:"List Spaceship" %>
           </div>
           <% end %>
         </div>
-        <%= link_to "⬅️Home", root_path, class: "underline" %>
       </div>
     </div>
   </div>
