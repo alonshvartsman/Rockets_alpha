@@ -1,35 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
-
-.banner-home {
-  background-image: url(https://wallpapersite.com/images/pages/pic_w/18307.jpg);
+.banner {
+  background-image: url(https://s5.gifyu.com/images/purp.gif);
   background-size: cover;
   background-position: center;
-  padding: 242px 0;
-  height: 498px;
+  padding: 265px 0;
   }
-
-.banner .container {
+.container {
   width: 1200px;
   margin: auto;
-  text-align: center;
   }
-
-.banner-home h1 {
+.banner h1 {
     color: white;
     font-size: 55px;
     font-family: 'Poiret One', cursive;
   }
-
-.banner-home p {
+.banner p {
   color: white;
   font-size: 15px;
 }
-
-#stars {
-  color: red;
+#mars {
+  color: #FFFFFF;
   font-size: 75px;
 }
-
 .btn-primary {
   display: inline-block;
   color: #FFFFFF;
@@ -39,8 +31,17 @@
   margin-top: 18px;
   font-size: 20px;
 }
-
 .btn-primary:hover {
   border-color: black;
   background-position: center;
+}
+.contain {
+  width: 1200px;
+  margin: auto;
+  color: white;
+}
+.gradient {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #000000, #000228, #4f229f, #D318FE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #000000, #000228, #4f229f, #D318FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
