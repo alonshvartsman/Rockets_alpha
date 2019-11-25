@@ -1,14 +1,13 @@
-<div class="banner">
+<div class="banner-home">
   <div class="container">
-    <h1>Welcome to your first trip to the <span id="stars">Stars</span></h1>
-    <a class="btn-primary" href="#">Sign up now!</a>
+    <h1>Welcome to your first trip to the <span id="stars">stars</span></h1>
+    <a class="btn-primary" href="">Sign up now!</a>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <h2>All Spaceships</h2>
-    <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
   </div>
 
   <div class="row">
@@ -26,13 +25,23 @@
           <p class="card-address">Launch Site: <%= spaceship.launch_site %></p>
           <p>Ticket Price: $<%= spaceship.cost %></p>
           <div class="card-actions">
+            <% if current_user && policy(spaceship).destroy? %>
             <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
             <%= link_to "More Info", spaceship_path(spaceship) %>
+            <% end %>
+            <% if current_user && policy(spaceship).edit? %>
+            <%=link_to "Edit this spaceship", edit_spaceship_path(spaceship)%> <br>
+            <% end %>
+            <p><%= link_to "More info", spaceship_path(spaceship) %></p>
           </div>
         </div>
       </div>
       <% end %>
+      <% if policy(Spaceship).create? %>
+        <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+        <% end %>
     </div>
 
   </div>
 </div>
+

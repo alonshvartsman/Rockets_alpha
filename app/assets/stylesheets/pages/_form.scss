@@ -1,7 +1,7 @@
 form {
   margin:10% auto 0 auto;
   padding:30px;
-  width:400px;
+  width:480px;
   height:auto;
   overflow:hidden;
   background:white;
@@ -45,7 +45,7 @@ form input[type="password"]:focus {
 
 input[type=submit] {
   padding:15px 50px;
-  width:auto;
+  width:100%;
   background:#1abc9c;
   border:none;
   color:white;
@@ -66,4 +66,10 @@ input[type=submit]:hover {
 
 input[type="submit"]:active {
   opacity:0.4;
+}
+
+#spaceship-details {
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 25px
 }
