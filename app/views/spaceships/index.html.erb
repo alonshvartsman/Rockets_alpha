@@ -8,6 +8,7 @@
 <div class="container">
   <div class="row">
     <h2>All Spaceships</h2>
+    <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
   </div>
 
   <div class="row">
@@ -18,12 +19,12 @@
       <% @spaceships.each do |spaceship| %>
       <div class="card">
         <div class="card-image">
-        <%= cl_image_tag spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %>
+        <%= cl_image_tag spaceship.photo %>
         </div>
         <div class="card-text">
           <h2 class="card-name"><%= spaceship.name %></h2>
-          <h4 class="card-address"><%= spaceship.launch_site %></h4>
-          <p>$<%= spaceship.cost %> per launch</p>
+          <p class="card-address"><%= spaceship.launch_site %></p>
+          <p>Ticket Price: <%= spaceship.cost %>$</p>
           <div class="card-actions">
             <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
             <%=link_to "Edit this spaceship", edit_spaceship_path(spaceship)%> <br>
