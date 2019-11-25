@@ -1,15 +1,14 @@
-class SpaceshipPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
-
-  def create?
+  def dashboard?
     true
   end
 
-  def show?
+  def create?
     true
   end
 
@@ -19,10 +18,6 @@ class SpaceshipPolicy < ApplicationPolicy
 
   def destroy?
     owner_or_admin?
-  end
-
-  def dashboard?
-    true
   end
 
   private

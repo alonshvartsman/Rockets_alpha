@@ -1,10 +1,11 @@
+<div class="new-form-background">
 <h2>Sign up</h2>
-
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-
+  <p>Already a user?  <span class="signinnew"><%= link_to "Sign in", new_user_session_path %></span></p>
+    <h1>Welcome to TravelZero</h1>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :email,
@@ -24,5 +25,5 @@
     <%= f.button :submit, "Liftoff" %>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
