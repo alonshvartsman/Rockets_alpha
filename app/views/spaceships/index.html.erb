@@ -28,7 +28,6 @@
         <% end %>
         </div>
         <div class="card-actions">
-
           <% if current_user && policy(spaceship).edit? %>
             <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
           <% end %>
@@ -36,7 +35,6 @@
             <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
           <% end %>
         </div>
-
       </div>
       <% end %>
       <% if policy(Spaceship).create? %>
