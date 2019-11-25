@@ -26,12 +26,16 @@
           <p>$<%= spaceship.cost %> per launch</p>
           <div class="card-actions">
             <%=link_to "Delete this spaceship", spaceship_path(spaceship), method: :delete, data: { confirm: 'Are you sure?' }%>
+            <%=link_to "Edit this spaceship", edit_spaceship_path(spaceship)%> <br>
             <p><%= link_to "More info", spaceship_path(spaceship) %></p>
           </div>
         </div>
       </div>
       <% end %>
-            <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+      <% if policy(Spaceship).create? %>
+        <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+        <% end %>
     </div>
   </div>
 </div>
+
