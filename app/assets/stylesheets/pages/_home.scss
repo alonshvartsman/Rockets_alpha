@@ -1,6 +1,20 @@
+//MAP WITH CARDS CSS
+.main-container {
+  display: flex;
+}
+
+.map {
+  height: 100vh;
+  min-width: 670px;
+  padding-left: 10px;
+}
+
+.contain {
+  flex-grow: 1;
+}
+
 // Specific CSS for your home-page
 .row {
-  display: flex;
   justify-content: center;
 }
 
@@ -104,3 +118,9 @@ a:hover {
 .logohome {
   width: 150px;
 }
+
+
+
+
+
+

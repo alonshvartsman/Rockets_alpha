@@ -1,4 +1,7 @@
 import "bootstrap";
-import { initPlane } from '../components/plane.js';
 
-initPlane();
+import 'mapbox-gl/dist/mapbox-gl.css';
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();
