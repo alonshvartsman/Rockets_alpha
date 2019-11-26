@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 
 .rocketnewimage {
-  background-image: url(https://us.123rf.com/450wm/littleairplane/littleairplane1701/littleairplane170100046/70905711-vector-seamless-pattern-with-zodiac-constellation-space-star-pattern-for-paper-textile-polygraphy-t-.jpg?ver=6);
-  background-repeat: repeat;
-  // background-image: url(https://i2.wp.com/www.rocketstem.org/wp-content/uploads/2019/10/blueorigin_newglenn_ascent_web.jpg?ssl=1);
-  // background-size: cover;
-  // background-position: center;
-  // height: 1498px;
+  background-image: url(https://i2.wp.com/www.rocketstem.org/wp-content/uploads/2019/10/blueorigin_newglenn_ascent_web.jpg?ssl=1);
+  background-size: cover;
+  background-position: center;
+  height: 1498px;
   }
 
 .rocketnewimage .container {
@@ -18,18 +16,9 @@
 .banner-new h1 {
     color: white;
     font-size: 55px;
-    font-family: 'Montserrat';
+    font-family: 'Poiret One', cursive;
     text-align: center;
-    padding-top: 50px;
   }
-
-  h3 {
-  color:white;
-  font-size: 30px;
-  font-family: 'Montserrat';
-  text-align: center;
-  padding-bottom: 0px;
-}
 
 .banner-new p {
   color: white;

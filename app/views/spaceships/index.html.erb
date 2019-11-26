@@ -1,9 +1,10 @@
-
-<div class="<%= user_signed_in? ? 'banner_home' : 'banner-img' %>">
+<p></p>
+<div class="banner_home">
   <div class="container">
     <h1 id="banner_h">REACH FOR THE SKY</h1>
     <% if !current_user %>
     <%= link_to "Sign up now!", new_user_session_path %>
+<<<<<<< HEAD
 
     <% end %>
   </div>
@@ -38,6 +39,36 @@
 
         <% if (current_user && policy(spaceship).edit?) || (current_user && policy(spaceship).destroy?) %>
           <div class="card-actions">
+=======
+    <% end %>  </div>
+  </div>
+
+  <div class="main-container">
+
+
+  <div class="contain">
+    <div class="row">
+      <h2>All <%= @spaceships.length %> Spaceships</h2>
+    </div>
+    <div class="row">
+      <div class="cards">
+        <% @spaceships.each do |spaceship| %>
+        <div class="card">
+          <div class="card_link">
+            <%= link_to spaceship_path(spaceship) do %>
+            <div class="card-image">
+              <%= cl_image_tag spaceship.photo %>
+            </div>
+            <div class="card-text">
+              <h3 class="card-name"><%= spaceship.name %></h3>
+              <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
+              <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
+            </div>
+            <% end %>
+          </div>
+          <div class="card-actions">
+
+>>>>>>> 7ed6732c151a4e47ed73b505f31de56fe8cee9b3
             <% if current_user && policy(spaceship).edit? %>
             <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
             <% end %>
@@ -48,6 +79,7 @@
         </div>
         <% end %>
       </div>
+<<<<<<< HEAD
 
         <% end %>
       </div>
@@ -56,6 +88,8 @@
     <br>
     <br>
 
+=======
+>>>>>>> 7ed6732c151a4e47ed73b505f31de56fe8cee9b3
     </div>
   </div>
 
