@@ -8,7 +8,17 @@ class SpaceshipsController < ApplicationController
   end
 
   def index
-    @spaceships = policy_scope(Spaceship).order(created_at: :desc)
+    @spaceships = policy_scope(Spaceship)
+                  .where.not(latitude: nil)
+                  .order(created_at: :desc)
+    # @spaceships = Spaceship.geocoded #returns spaceship with coordinates
+    @markers = @spaceships.map do |spaceship|
+      {
+        lat: spaceship.latitude,
+        lng: spaceship.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { spaceship: spaceship })
+      }
+    end
   end
 
   def show

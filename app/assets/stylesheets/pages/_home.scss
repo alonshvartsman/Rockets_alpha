@@ -1,30 +1,20 @@
-// Specific CSS for your home-page
-.darkgray {
-  color: darkgray;
-  font-family:'Montserrat';
-}
-
-
-#new_spaceship_btn {
-  margin-bottom:30px;
-  background-color:darkgray;
-  padding:8px 16px;
-  color:white;
-  border-radius: 5px;
-
-}
-
-#new_spaceship_btn:hover {
-  background-color:#da00ff;
-}
-
-#new_spaceship_btn a {
-  color: white;
-}
-
-
-.row {
+//MAP WITH CARDS CSS
+.main-container {
   display: flex;
+}
+
+.map {
+  height: 100vh;
+  min-width: 670px;
+  padding-left: 10px;
+}
+
+.contain {
+  flex-grow: 1;
+}
+
+// Specific CSS for your home-page
+.row {
   justify-content: center;
 }
 
@@ -64,14 +54,12 @@ a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   position: relative;
   border: 0px;
-  position: relative;
 }
 
-.card-image img{
+.card-image img {
   height: 180px;
   background-position: center;
   object-fit: cover;
-  width: 100%;
 }
 
 .card-text {
@@ -115,7 +103,7 @@ a:hover {
 }
 
 .card-actions .delete_action a:hover {
-  color: red;
+  color: #c7c7c7;
 }
 .card-actions {
   display: flex;
@@ -125,20 +113,14 @@ a:hover {
   padding-top: 7px;
   background-color: #c3c3c3;
   background-color: #c3c3c3;
-  min-height: 45.4px;
-
 }
 
 .logohome {
   width: 150px;
 }
 
-.avatar-img-spaceship img{
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  top: 232px;
-}
+
+
+
+
 

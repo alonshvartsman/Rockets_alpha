@@ -1,16 +1,35 @@
-<h1>your spaceships</h1>
-<% @spaceships.each do |spaceship| %>
-<%= spaceship.name %> <br>
-<%= spaceship.cost %> <br>
-<%= spaceship.launch_site %> <br>
-<%= cl_image_tag spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
-<% end %>
-<h1>your bookings</h1>
-<% @bookings.each do |booking| %>
-<% @spaceship = booking.spaceship %>
-<%= booking.date %> <br>
-<%= @spaceship.name %> <br>
-<%= @spaceship.cost %> <br>
-<%= @spaceship.launch_site %> <br>
-<%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
-<% end %>
+<div class="dashboard-container">
+  <div class="spaceship-container">
+    <div class="row">
+      <h1>your spaceships</h1>
+    </div>
+    <div class="row">
+      <div class="cards">
+        <% @spaceships.each do |spaceship| %>
+        <div class="card">
+          <div class="text">
+            <h2 class="card-name"><%= spaceship.name %></h2>
+            <p class="card-address"><%= spaceship.cost %>/</p>
+            <p class="card-address" ><%= spaceship.launch_site %></p>
+          </div>
+          <div class="card-image">
+            <%= cl_image_tag spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images"%>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1>your bookings</h1>
+    <% @bookings.each do |booking| %>
+    <% @spaceship = booking.spaceship %>
+    <%= booking.date %> <br>
+    <%= @spaceship.name %> <br>
+    <%= @spaceship.cost %> <br>
+    <%= @spaceship.launch_site %> <br>
+    <%= cl_image_tag @spaceship.photo, height: 300, width: 400, crop: :fill, class:"spaceship-images" %> <br>
+    <% end %>
+  </div>
+</div>
+
