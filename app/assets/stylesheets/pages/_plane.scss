@@ -2,6 +2,7 @@ $seatColor:#757575;
 $seatColorSelected:#176cff;
 $seatDisabled:#cc6262;
 
+
 body{
   min-height:100vh;
   background-color:#f5f5f5;
@@ -15,6 +16,7 @@ body{
   transform-style:preserve-3d;
   position: relative;
   margin-left: -650px;
+  margin-top: 2px;
 }
 
 .cabin{
@@ -281,6 +283,41 @@ body{
 
 .formspacebooking {
   position: absolute;
-  top: 0;
-  right: 10px;
+  top: 200px;
+  right: 120px;
 }
+
+.booking-header{
+  margin-bottom: 100px;
+}
+
+.booking-header-text{
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
