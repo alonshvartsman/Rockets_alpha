@@ -1,5 +1,5 @@
 
-<div class="banner_home">
+<div class="<%= user_signed_in? ? 'banner_home' : 'banner-img' %>">
   <div class="container">
     <h1 id="banner_h">REACH FOR THE SKY</h1>
   <% if !current_user %>
