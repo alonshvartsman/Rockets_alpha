@@ -1,13 +1,13 @@
-const initPlane = () => {
-  var $body = $('body');
-  console.log($body)
-  $body.on('click','.btn-utility',function(){
-    $('.aircraft-details').toggleClass('open');
-    console.log("clicked")
-  })
-}
+// const initPlane = () => {
+//   var $body = $('body');
+//   console.log($body)
+//   $body.on('click','.btn-utility',function(){
+//     $('.aircraft-details').toggleClass('open');
+//     console.log("clicked")
+//   })
+// }
 
-export { initPlane }
+// export { initPlane }
 
 // const body = document.querySelector("body")
 // const airDet = document.querySelector(".aircraft-details")

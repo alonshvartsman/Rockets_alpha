@@ -4,6 +4,35 @@
     <h1 id="banner_h">REACH FOR THE SKY</h1>
     <% if !current_user %>
     <%= link_to "Sign up now!", new_user_session_path %>
+
+    <% end %>  </div>
+  </div>
+
+  <div class="main-container">
+
+
+  <div class="contain">
+    <div class="row">
+      <h2>All <%= @spaceships.length %> Spaceships</h2>
+    </div>
+    <div class="row">
+      <div class="cards">
+        <% @spaceships.each do |spaceship| %>
+        <div class="card">
+          <div class="card_link">
+            <%= link_to spaceship_path(spaceship) do %>
+            <div class="card-image">
+              <%= cl_image_tag spaceship.photo %>
+            </div>
+            <div class="card-text">
+              <h3 class="card-name"><%= spaceship.name %></h3>
+              <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
+              <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
+            </div>
+            <% end %>
+          </div>
+          <div class="card-actions">
+
     <% end %>
   </div>
 </div>
@@ -44,12 +73,34 @@
             <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
             <% end %>
           </div>
+
+        </div>
+        <% end %>
+        <% if policy(Spaceship).create? %>
+        <p><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+        <% end %>
+      </div>
+
         <% end %>
       </div>
       <% end %>
     <br>
     <br>
     <br>
+
     </div>
   </div>
+
+     <div class="map">
+          <div
+          id="map"
+          style="width: 100%;
+          height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    </div>
+
+
+
 </div>
