@@ -1,11 +1,14 @@
+
+
 form {
-  margin:10% auto 0 auto;
+  margin:3% auto 0 auto;
   padding:30px;
   width:480px;
   height:auto;
   overflow:hidden;
   background:white;
   border-radius:10px;
+  margin-bottom: 50px;
 }
 
 form label {
@@ -71,5 +74,6 @@ input[type="submit"]:active {
 #spaceship-details {
   padding-bottom: 10px;
   text-align: center;
-  font-size: 25px
+  font-size: 23px;
+  color: black;
 }

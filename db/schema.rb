@@ -12,15 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2019_11_26_090203) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "date"
     t.bigint "spaceship_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "date"
     t.index ["spaceship_id"], name: "index_bookings_on_spaceship_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_090203) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.boolean "admin", default: false
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
