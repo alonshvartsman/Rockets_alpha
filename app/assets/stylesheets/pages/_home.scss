@@ -4,6 +4,25 @@
   font-family:'Montserrat';
 }
 
+
+#new_spaceship_btn {
+  margin-bottom:30px;
+  background-color:darkgray;
+  padding:8px 16px;
+  color:white;
+  border-radius: 5px;
+
+}
+
+#new_spaceship_btn:hover {
+  background-color:#da00ff;
+}
+
+#new_spaceship_btn a {
+  color: white;
+}
+
+
 .row {
   display: flex;
   justify-content: center;
