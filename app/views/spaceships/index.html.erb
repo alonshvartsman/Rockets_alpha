@@ -1,5 +1,4 @@
-
-<div class="<%= user_signed_in? ? 'banner_home' : 'banner-img' %>">
+<div class="<%= user_signed_in? ? 'banner_home' : 'firstframe_kftwdy' %>">
   <div class="container">
     <h1 id="banner_h">REACH FOR THE SKY</h1>
     <% if !current_user %>
@@ -7,15 +6,14 @@
     <% end %>
   </div>
 </div>
-
 <div class="contain">
   <div class="row" style="
-  margin: 30px 0px 0px 0px;">
-  <h2 class ="darkgray">All Spaceships (<%= @spaceships.length %>)</h2>
-</div>
-<div class="row">
-  <% if policy(Spaceship).create? %>
-  <p id="new_spaceship_btn"><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+    margin: 30px 0px 0px 0px;">
+    <h2 class ="darkgray">All Spaceships (<%= @spaceships.length %>)</h2>
+  </div>
+  <div class="row">
+    <% if policy(Spaceship).create? %>
+    <p id="new_spaceship_btn"><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
   <% end %></div>
   <div class="row">
     <div class="cards">
@@ -34,22 +32,21 @@
           </div>
           <% end %>
         </div>
-
         <% if (current_user && policy(spaceship).edit?) || (current_user && policy(spaceship).destroy?) %>
-          <div class="card-actions">
-            <% if current_user && policy(spaceship).edit? %>
-            <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
-            <% end %>
-            <% if current_user && policy(spaceship).destroy? %>
-            <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
-            <% end %>
-          </div>
+        <div class="card-actions">
+          <% if current_user && policy(spaceship).edit? %>
+          <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
+          <% end %>
+          <% if current_user && policy(spaceship).destroy? %>
+          <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
+          <% end %>
+        </div>
         <% end %>
       </div>
       <% end %>
-    <br>
-    <br>
-    <br>
+      <br>
+      <br>
+      <br>
     </div>
   </div>
 </div>
