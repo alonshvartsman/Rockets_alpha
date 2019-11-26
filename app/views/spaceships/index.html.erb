@@ -2,7 +2,7 @@
 <div class="<%= user_signed_in? ? 'banner_home' : 'banner-img' %>">
   <div class="container">
     <h1 id="banner_h">REACH FOR THE SKY</h1>
-  <% if !current_user %>
+    <% if !current_user %>
     <%= link_to "Sign up now!", new_user_session_path %>
     <% end %>
   </div>
@@ -10,40 +10,46 @@
 
 <div class="contain">
   <div class="row" style="
-    margin: 30px 0px 0px 0px;">
-    <h2 class ="darkgray">All Spaceships (<%= @spaceships.length %>)</h2>
-  </div>
-  <div class="row">
-    <% if policy(Spaceship).create? %>
-      <p id="new_spaceship_btn"><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
-    <% end %></div>
+  margin: 30px 0px 0px 0px;">
+  <h2 class ="darkgray">All Spaceships (<%= @spaceships.length %>)</h2>
+</div>
+<div class="row">
+  <% if policy(Spaceship).create? %>
+  <p id="new_spaceship_btn"><%= link_to "List a new spaceship", new_spaceship_path(@spaceship) %></p>
+  <% end %></div>
   <div class="row">
     <div class="cards">
-    <% @spaceships.each do |spaceship| %>
+      <% @spaceships.each do |spaceship| %>
       <div class="card">
         <div class="card_link">
-    <%= link_to spaceship_path(spaceship) do %>
-        <div class="card-image">
-        <%= cl_image_tag spaceship.photo %>
+          <%= link_to spaceship_path(spaceship) do %>
+          <div class="card-image">
+            <%= cl_image_tag spaceship.photo, class: "card-image" %>
+          </div>
+          <div class="avatar-img-spaceship"><%= cl_image_tag spaceship.user.photo%></div>
+          <div class="card-text">
+            <h3 class="card-name"><%= spaceship.name %></h3>
+            <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
+            <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
+          </div>
+          <% end %>
         </div>
-        <div class="avatar-img-spaceship"><%= cl_image_tag spaceship.user.photo%></div>
-        <div class="card-text">
-          <h3 class="card-name"><%= spaceship.name %></h3>
-          <p class="card-address"><span class="text-topic">Launch Site:</span> <%= spaceship.launch_site %></p>
-          <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= spaceship.cost %></p>
-        </div>
-        <% end %>
-        </div>
-        <div class="card-actions">
-          <% if current_user && policy(spaceship).edit? %>
+
+        <% if (current_user && policy(spaceship).edit?) || (current_user && policy(spaceship).destroy?) %>
+          <div class="card-actions">
+            <% if current_user && policy(spaceship).edit? %>
             <p><%=link_to "Edit", edit_spaceship_path(spaceship)%></p>
-          <% end %>
-          <% if current_user && policy(spaceship).destroy? %>
+            <% end %>
+            <% if current_user && policy(spaceship).destroy? %>
             <p class="delete_action"><%=link_to "Delete", spaceship_path(spaceship), method: :delete, data: { confirm: "Are you sure?" }%></p>
-          <% end %>
-        </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
       <% end %>
+    <br>
+    <br>
+    <br>
     </div>
   </div>
 </div>

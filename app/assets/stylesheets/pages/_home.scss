@@ -67,10 +67,11 @@ a:hover {
   position: relative;
 }
 
-.card-image img {
+.card-image img{
   height: 180px;
   background-position: center;
   object-fit: cover;
+  width: 100%;
 }
 
 .card-text {
@@ -124,6 +125,8 @@ a:hover {
   padding-top: 7px;
   background-color: #c3c3c3;
   background-color: #c3c3c3;
+  min-height: 45.4px;
+
 }
 
 .logohome {
