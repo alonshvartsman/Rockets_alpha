@@ -40,6 +40,7 @@ a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   position: relative;
   border: 0px;
+  position: relative;
 }
 
 .card-image img {
@@ -104,3 +105,13 @@ a:hover {
 .logohome {
   width: 150px;
 }
+
+.avatar-img-spaceship img{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 232px;
+}
+
