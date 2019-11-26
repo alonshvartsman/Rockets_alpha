@@ -1,4 +1,28 @@
 // Specific CSS for your home-page
+.darkgray {
+  color: darkgray;
+  font-family:'Montserrat';
+}
+
+
+#new_spaceship_btn {
+  margin-bottom:30px;
+  background-color:darkgray;
+  padding:8px 16px;
+  color:white;
+  border-radius: 5px;
+
+}
+
+#new_spaceship_btn:hover {
+  background-color:#da00ff;
+}
+
+#new_spaceship_btn a {
+  color: white;
+}
+
+
 .row {
   display: flex;
   justify-content: center;
@@ -43,10 +67,11 @@ a:hover {
   position: relative;
 }
 
-.card-image img {
+.card-image img{
   height: 180px;
   background-position: center;
   object-fit: cover;
+  width: 100%;
 }
 
 .card-text {
@@ -100,6 +125,8 @@ a:hover {
   padding-top: 7px;
   background-color: #c3c3c3;
   background-color: #c3c3c3;
+  min-height: 45.4px;
+
 }
 
 .logohome {
