@@ -1,19 +1,26 @@
+#new_user {
+  margin-bottom: 100px;
+}
+
 .new-form-background {
-  background-image: url(https://images.unsplash.com/photo-1457364887197-9150188c107b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
-  background-size: cover;
-  background-position: center;
-  height: 1498px;
+  background-image: url('https://res.cloudinary.com/flameleviosa/image/upload/v1574854741/70905711-vector-seamless-pattern-with-zodiac-constellation-space-star-pattern-for-paper-textile-polygraphy-t-_afm86b.jpg');
+  background-repeat:repeat;
 }
 
 .banner h1 {
     color: black;
-    font-size: 55px;
-    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    font-family: 'Montserrat';
     text-align: center;
   }
 
+.banner-new {
+  padding-top: 50px;
+}
+
 .banner h3 {
   text-align: center;
+  color: white;
 }
 
 .banner p {
@@ -23,8 +30,10 @@
 }
 
 #stars {
-  color: red;
-  font-size: 75px;
+  color: #762ad5;
+  font-size: 55px;
+  font-weight: bold;
+
 }
 
 .btn-primary {
@@ -47,5 +56,9 @@
 }
 
 .logoform {
-  height: 187px;
+  // height: 187px;
+  width: 100%;
+  margin-bottom:10px;
+  margin-top:10px;
+
 }
