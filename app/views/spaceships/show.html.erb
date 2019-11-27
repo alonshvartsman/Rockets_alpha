@@ -1,18 +1,26 @@
-<div class="container-show">
-  <div class="row-show">
-    <div class="image_banner">
-      <%= cl_image_tag @spaceship.photo %>
+<article class="product">
+  <header class="show-product">
+    <h1><%= @spaceship.name %></h1>
+    <p><%= @spaceship.launch_site %></p>
+    <p><%= @spaceship.cost %></p><% if current_user && policy(@spaceship).destroy? %>
+    <% end %>
+    <div class="buttons-product">
+    <div class="row">
+      <div class="justify-content-center">
+        <%=link_to "Delete", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
+        <% if current_user && policy(@spaceship).edit? %>
+        <%=link_to "Edit", edit_spaceship_path(@spaceship)%> <br>
+        <% end %>
+        <%= link_to 'book a seat Today!', new_spaceship_booking_path(@spaceship) %> <br>
+        <%= link_to "back to main page", spaceships_path %>
+      </div>
     </div>
-  </div>
-</div>
-<h1><%= @spaceship.name %></h1>
-<p><%= @spaceship.cost %></p>
-<p><%= @spaceship.launch_site %></p>
-<% if current_user && policy(@spaceship).destroy? %>
-<%=link_to "Delete", spaceship_path, method: :delete, data: { confirm: 'Are you sure?' }%> <br>
-<% end %>
-<% if current_user && policy(@spaceship).edit? %>
-<%=link_to "Edit", edit_spaceship_path(@spaceship)%> <br>
-<% end %>
-<%= link_to 'book a seat Today!', new_spaceship_booking_path(@spaceship) %> <br>
-<%= link_to "back to main page", spaceships_path %>
+    </div>
+  </header>
+
+  <section class="product-images">
+    <figure class="product-thumb thumb-active" data-pos="0">
+      <%= cl_image_tag @spaceship.photo %>
+    </figure>
+  </section>
+</article>
