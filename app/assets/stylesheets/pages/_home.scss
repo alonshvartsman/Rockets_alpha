@@ -1,15 +1,7 @@
 a:hover {
   text-decoration: none;
 }
-//index page css
 
-//header before the sign-up
-
-
-
-///////////////////////
-
-//MAP WITH CARDS CSS
 .main-container {
   height: 200vh;
 }
@@ -71,15 +63,12 @@ a:hover {
 // Specific CSS for your home-page
 .card-row{
   justify-content: center;
-}
-
-a:hover {
-  text-decoration: none;
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
+
 
 .card {
   background-color: white;
