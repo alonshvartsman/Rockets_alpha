@@ -1,6 +1,6 @@
 //MAP WITH CARDS CSS
 .main-container {
-  display: flex;
+  height: 200vh;
 }
 
 .container {
@@ -141,3 +141,12 @@ a:hover {
 }
 
 
+
+.home-banner {
+  background-image: url('https://images.unsplash.com/photo-1574283275608-f60f29549194?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1365&q=80');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+}

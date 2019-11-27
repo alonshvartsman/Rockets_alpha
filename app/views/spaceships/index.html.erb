@@ -1,6 +1,7 @@
 <div class="<%= user_signed_in? ? 'banner_home' : 'banner-img' %>">
+
   <div class="container">
-    <h1 class="banner_header">REACH FOR THE SKY</h1>
+    <h1 id="banner_h">REACH FOR THE SKY</h1>
     <% if !current_user %>
     <h2 class="btn btn-primary"><%= link_to "Sign up now!", new_user_registration_path %> </h2>
     <% end %>
