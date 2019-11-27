@@ -1,11 +1,29 @@
 $seatColor:#757575;
 $seatColorSelected:#176cff;
 $seatDisabled:#cc6262;
+
+#date_container{
+  position: relative;
+  bottom: 619px;
+  left: 764px;
+}
+
+.date-form {
+  margin: 0px;
+  margin-right: 0px;
+  width: 480px;
+}
+
+#date_container p {
+  opacity: .6;
+}
+
 .plane{
   perspective: 900px;
   transform-style:preserve-3d;
   position: relative;
   margin-left: -650px;
+  margin-top: 138px;
 }
 
 .cabin{
