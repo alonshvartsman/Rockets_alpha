@@ -1,10 +1,8 @@
 $seatColor:#757575;
 $seatColorSelected:#176cff;
 $seatDisabled:#cc6262;
-
-
 .plane{
-  perspective:900px;
+  perspective: 900px;
   transform-style:preserve-3d;
   position: relative;
   margin-left: -650px;
