@@ -6,6 +6,7 @@
 //     console.log("clicked")
 //   })
 // }
+flatpickr(".datepicker", {})
 
 // export { initPlane }
 
