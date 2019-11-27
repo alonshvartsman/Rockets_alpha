@@ -2,16 +2,9 @@ $seatColor:#757575;
 $seatColorSelected:#176cff;
 $seatDisabled:#cc6262;
 
-body{
-  min-height:100vh;
-  background-color:#f5f5f5;
-  font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
-  font-size:15px;
-  perspective:900px;
-  transform-style:preserve-3d;
-}
 
 .plane{
+  perspective:900px;
   transform-style:preserve-3d;
   position: relative;
   margin-left: -650px;
@@ -280,7 +273,7 @@ body{
 
 
 .formspacebooking {
-  position: absolute;
-  top: 0;
-  right: 10px;
+  position: relative;
+  top: -740px;
+  right: -220px;
 }
