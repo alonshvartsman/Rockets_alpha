@@ -16,3 +16,12 @@
   background-color: white;
 }
 
+.nav-link {
+  color: #7900FE !important;
+}
+
+.nav-link:hover {
+  background: #f5f0f0;
+  transition: all 0.2s ease-in;
+  border-radius: 5px;
+}
