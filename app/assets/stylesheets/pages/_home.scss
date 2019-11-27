@@ -70,6 +70,8 @@
   justify-content: center;
 }
 
+
+
 a:hover {
   text-decoration: none;
 }
@@ -89,6 +91,7 @@ a:hover {
   border-radius: 2px;
   border-radius: 7px;
   border-radius: 7px;
+  position: relative;
 }
 
 .card-image img {
@@ -114,6 +117,14 @@ a:hover {
   margin: 0px;
 }
 
+.avatar-img-spaceship img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 270px;
+  right: 20px;
+}
 .card-actions {
   display: flex;
   justify-content: space-around;
