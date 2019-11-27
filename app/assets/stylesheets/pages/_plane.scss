@@ -1,10 +1,6 @@
 $seatColor:#757575;
 $seatColorSelected:#176cff;
 $seatDisabled:#cc6262;
-
-body {
-}
-
 .plane{
   perspective: 900px;
   transform-style:preserve-3d;
@@ -275,7 +271,7 @@ body {
 
 
 .formspacebooking {
-  position: absolute;
-  top: 0;
-  right: 10px;
+  position: relative;
+  top: -740px;
+  right: -220px;
 }

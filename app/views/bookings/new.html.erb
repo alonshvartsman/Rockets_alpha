@@ -112,43 +112,7 @@
     <div class="seat five"><label class="label-plane" for="seat-j5"><input id="seat-j5" type="checkbox" class="seat-check visuallyhidden" name="seat-jssignment" value="" data-seat="J5"/><span class="seat-label">Five</span></label></div>
     <div class="seat six"><label class="label-plane" for="seat-j6"><input id="seat-j6" type="checkbox" class="seat-check visuallyhidden" name="seat-jssignment" value="" data-seat="J6" disabled="disabled"/><span class="seat-label">Six</span></label></div>
   </div>
-
-
-
-     <div class="seat-row">
-    <div class="seat one"><label class="label-plane" for="seat-k1"><input id="seat-k1" type="checkbox" class="seat-check visuallyhidden" name="seat-kssignment" value="" data-seat="K1" disabled="disabled"/><span class="seat-label">One</span></label></div>
-    <div class="seat two"><label class="label-plane" for="seat-k2"><input id="seat-k2" type="checkbox" class="seat-check visuallyhidden" name="seat-kssignment" value="" data-seat="K2"/><span class="seat-label">Two</span></label></div>
-    <div class="seat three"><label class="label-plane" for="seat-k3"><input id="seat-k3" type="checkbox" class="seat-check visuallyhidden" name="seat-kssignment" value="" data-seat="K3"/><span class="seat-label">Three</span></label></div>
-    <div class="aisle"><span class="aisle-number">K</span></div>
-    <div class="seat four"><label class="label-plane" for="seat-k4"><input id="seat-k4" type="checkbox" class="seat-check visuallyhidden" name="seat-kssignment" value="" data-seat="K4"/><span class="seat-label">Four</span></label></div>
-    <div class="seat five"><label class="label-plane" for="seat-k5"><input id="seat-k5" type="checkbox" class="seat-check visuallyhidden" name="seat-kssignment" value="" data-seat="K5" disabled="disabled"/><span class="seat-label">Five</span></label></div>
-    <div class="seat six"><label class="label-plane" for="seat-k6"><input id="seat-k6" type="checkbox" class="seat-check visuallyhidden" name="seat-kssignment" value="" data-seat="K6" disabled="disabled"/><span class="seat-label">Six</span></label></div>
-  </div>
-
-
-     <div class="seat-row">
-    <div class="seat one"><label class="label-plane" for="seat-l1"><input id="seat-l1" type="checkbox" class="seat-check visuallyhidden" name="seat-lssignment" value="" data-seat="L1"/><span class="seat-label">One</span></label></div>
-    <div class="seat two"><label class="label-plane" for="seat-l2"><input id="seat-l2" type="checkbox" class="seat-check visuallyhidden" name="seat-lssignment" value="" data-seat="L2"/><span class="seat-label">Two</span></label></div>
-    <div class="seat three"><label class="label-plane" for="seat-l3"><input id="seat-l3" type="checkbox" class="seat-check visuallyhidden" name="seat-lssignment" value="" data-seat="L3"/><span class="seat-label">Three</span></label></div>
-    <div class="aisle"><span class="aisle-number">L</span></div>
-    <div class="seat four"><label class="label-plane" for="seat-l4"><input id="seat-l4" type="checkbox" class="seat-check visuallyhidden" name="seat-lssignment" value="" data-seat="L4"/><span class="seat-label">Four</span></label></div>
-    <div class="seat five"><label class="label-plane" for="seat-l5"><input id="seat-l5" type="checkbox" class="seat-check visuallyhidden" name="seat-lssignment" value="" data-seat="L5"/><span class="seat-label">Five</span></label></div>
-    <div class="seat six"><label class="label-plane" for="seat-l6"><input id="seat-l6" type="checkbox" class="seat-check visuallyhidden" name="seat-lssignment" value="" data-seat="L6"/><span class="seat-label">Six</span></label></div>
-  </div>
 </div>
 </div>
-
-<div class="formspacebooking">
-<%= simple_form_for [@spaceship, @booking] do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :date %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
 </div>
 
