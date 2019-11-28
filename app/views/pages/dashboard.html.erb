@@ -88,7 +88,7 @@
             <h3 class="card-name"><%= booking.spaceship.name %></h3>
             <p class="card-address"><span class="text-topic">Launch Site:</span> <%= booking.spaceship.launch_site %></p>
             <p class="card-cost"><span class="text-topic">Ticket Price:</span> $<%= booking.spaceship.cost %></p>
-            <p class="card-cost"><span class="text-topic">departure:</span> $<%= booking.date %></p>
+            <p class="card-cost"><span class="text-topic">departure:</span> <%= booking.date.strftime("%d/%m/%Y") %></p>
           </div>
           <% end %>
         </div>
