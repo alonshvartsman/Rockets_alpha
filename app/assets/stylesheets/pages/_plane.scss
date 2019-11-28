@@ -2,10 +2,17 @@ $seatColor:#757575;
 $seatColorSelected:#176cff;
 $seatDisabled:#cc6262;
 
+h1 {
+  font-family: 'Montserrat';
+}
+
+.booking_container {
+  display: flex;
+  justify-content: space-around;
+  margin: 150px;
+}
+
 #date_container{
-  position: relative;
-  bottom: 619px;
-  left:  702px;
 }
 
 .date-form {
@@ -18,12 +25,10 @@ $seatDisabled:#cc6262;
   opacity: .6;
 }
 
-.plane{
+.plane {
   perspective: 900px;
   transform-style:preserve-3d;
-  position: relative;
-  margin-left: -650px;
-  margin-top: 138px;
+  text-align: center;
 }
 
 .cabin{
