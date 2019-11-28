@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-#purple_login a {
-  color: #1abc9c;
-  font-weight:bold;
+.background-for-login {
+  background-image: url('https://res.cloudinary.com/flameleviosa/image/upload/v1574854741/70905711-vector-seamless-pattern-with-zodiac-constellation-space-star-pattern-for-paper-textile-polygraphy-t-_afm86b.jpg');
+  background-repeat:repeat;
+  height:100%;
+  padding-bottom: 50px;
 }
 
 .banner-new h1 {
@@ -33,11 +35,70 @@
   font-weight:bolder;
 }
 
-
-#top_margin {
+.title-for-login {
   color: #762ad5;
   font-size: 75px;
-  font-weight: bolder;
-  margin-top:120px;
+  text-align: center;
+  padding-top: 120px;
 }
+
+.form-actions-login{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-actions-login-button {
+ background-color: #762AD5;
+ border-radius: 5px;
+ color: white;
+ padding: 8px 140px;
+}
+
+.form-actions-login-button:hover {
+  color: white;
+  opacity: 0.8;
+  transition: all 0.2s ease-in;
+}
+
+.footer-sign-up{
+  text-align: center;
+  padding: 5px
+}
+
+.footer-sign-up a {
+  color: #762AD5;
+  padding: 5px;
+}
+
+.footer-sign-up a:hover {
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #762AD5;
+  transition: all 0.2s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
