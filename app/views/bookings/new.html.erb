@@ -116,12 +116,12 @@
   </div>
 
   <div id="date_container">
-    <form class="date-form" action="/dashboard">
-      <p>choose date for flight*</p>
-      <input class="datepicker">
-      <input type="submit">
-    </form>
+   <%= simple_form_for [@spaceship, @booking] do |f| %>
+      <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.submit class: "", value:"book now" %>
+    <% end %>
   </div>
-</div>
+
+
 
 
