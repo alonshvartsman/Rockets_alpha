@@ -128,7 +128,7 @@ a:hover {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  background-color: #c3c3c3;
+  background-color: #7801fe;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
@@ -140,14 +140,13 @@ a:hover {
 }
 
 .card-actions a {
-  color: #7900FE;
+  color: white;
   padding: 5px;
 }
 
 .card-actions a:hover {
-  background: #7900FE;
   border-radius: 3px;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   padding: 5px;
   transition: all 0.1s ease-in;
 }
