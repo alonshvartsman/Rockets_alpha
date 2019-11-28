@@ -3,7 +3,9 @@
   <div class="container">
     <h1 id="banner_h">REACH FOR THE SKY</h1>
     <% if !current_user %>
-    <h2 class="btn btn-primary"><%= link_to "Sign up now!", new_user_registration_path %> </h2>
+
+    <h2 class="rocketshipbutton"><%= link_to "Sign up now!", new_user_registration_path %> </h2>
+
     <% end %>
   </div>
 </div>
@@ -49,11 +51,3 @@
     </div>
   </div>
 </div>
-<!--      <div class="map">
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div> -->
