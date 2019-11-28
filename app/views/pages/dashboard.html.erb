@@ -95,10 +95,10 @@
         <% if (current_user && policy(booking).edit?) || (current_user && policy(booking).destroy?) %>
         <div class="card-actions">
           <% if current_user && policy(booking).edit? %>
-          <p><%=link_to "Edit", edit_spaceship_path(booking)%></p>
+          <p><%=link_to "Edit", edit_booking_path(booking)%></p>
           <% end %>
           <% if current_user && policy(booking).destroy? %>
-          <p class="delete_action"><%=link_to "Delete", spaceship_path(booking), method: :delete, data: { confirm: "Are you sure?" }%></p>
+          <p class="delete_action"><%=link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }%></p>
           <% end %>
         </div>
         <% end %>

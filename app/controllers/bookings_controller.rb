@@ -30,11 +30,11 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def delete
+  def destroy
     @booking = Booking.find(params[:id])
-    # spaceship = @booking.spaceship
+    authorize @booking
     @booking.destroy
-    redirect_to spaceship_path spaceship
+    redirect_to root_path
   end
 
   private
