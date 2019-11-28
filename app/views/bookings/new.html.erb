@@ -1,5 +1,7 @@
 <div class="booking_container">
+
   <div class="plane">
+    <h1>Choose your seat</h1>
     <div class="cabin">
       <div class="seat-row">
         <div class="seat one"><label class="label-plane" for="seat-a1"><input id="seat-a1" type="checkbox" class="seat-check visuallyhidden" name="seat-assignment" value="" data-seat="A1" disabled="disabled"/><span class="seat-label">One</span></label></div>
@@ -89,8 +91,6 @@
         <div class="seat six"><label class="label-plane" for="seat-h6"><input id="seat-h6" type="checkbox" class="seat-check visuallyhidden" name="seat-hssignment" value="" data-seat="H6" disabled="disabled"/><span class="seat-label">Six</span></label></div>
       </div>
 
-
-
       <div class="seat-row">
         <div class="seat one"><label class="label-plane" for="seat-i1"><input id="seat-i1" type="checkbox" class="seat-check visuallyhidden" name="seat-issignment" value="" data-seat="I1"/><span class="seat-label">One</span></label></div>
         <div class="seat two"><label class="label-plane" for="seat-i2"><input id="seat-i2" type="checkbox" class="seat-check visuallyhidden" name="seat-issignment" value="" data-seat="I2"/><span class="seat-label">Two</span></label></div>
@@ -100,8 +100,6 @@
         <div class="seat five"><label class="label-plane" for="seat-i5"><input id="seat-i5" type="checkbox" class="seat-check visuallyhidden" name="seat-issignment" value="" data-seat="I5"/><span class="seat-label">Five</span></label></div>
         <div class="seat six"><label class="label-plane" for="seat-i6"><input id="seat-i6" type="checkbox" class="seat-check visuallyhidden" name="seat-issignment" value="" data-seat="I6"/><span class="seat-label">Six</span></label></div>
       </div>
-
-
 
       <div class="seat-row">
         <div class="seat one"><label class="label-plane" for="seat-j1"><input id="seat-j1" type="checkbox" class="seat-check visuallyhidden" name="seat-jssignment" value="" data-seat="J1"/><span class="seat-label">One</span></label></div>
@@ -116,11 +114,14 @@
   </div>
 
   <div id="date_container">
+      <h1>Choose date</h1>
    <%= simple_form_for [@spaceship, @booking] do |f| %>
       <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.submit class: "", value:"book now" %>
     <% end %>
   </div>
+ </div>
+
 
 
 
