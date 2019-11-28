@@ -18,11 +18,12 @@ User.destroy_all
 
 
 puts "creating 2 users"
-user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
-user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
+# user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
+# user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
 # TODO change this when we have user photo uploader for avatars !!!
-# user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456', remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1574763484/rt4xev06euwmfnmnbn19.jpg" )
-# user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456', remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1574861452/cqpvqvczhvhnsmsrypfw.jpg" )
+user = User.create!(first_name: 'Elon', last_name: 'Musk', email: 'test@test.com', password: '123456', remote_photo_url: "https://pbs.twimg.com/profile_images/378800000305778238/852d2f76797dbe1da82095f988d38fbe_400x400.png" )
+user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@test.com', password: '123456', remote_photo_url: "https://pbs.twimg.com/profile_images/705575079258812420/cMMNr1UJ_400x400.jpg" )
+user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456', remote_photo_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2005/07/24/lanceafp128ready.jpg?width=300&quality=85&auto=format&fit=max&s=3a8b55f200e6466e3ad7a9a898d11172" )
 
 SHIPNAMES = ["Neptune's Folley", "Spaceship X", "Delta 67", "Beoing E-37", "Normandy", "Denim", "Baby Blue Alpaca", "Greenest Grass", "Jordin Sparks-No Air", "Kappa 3"]
 LAUNCH_SITES = ["Houston, TX", "Austin, TX", "Florida", "Miami", "Hawaii", "Tel Aviv", "Beit Arye", "My Pants", "Vegas", "Le Wagon", "NASA"]
@@ -59,6 +60,17 @@ puts "creating 5 spaceships for user2"
     )
 end
 
+puts "creating 5 spaceships for user3"
+5.times do
+  Spaceship.create!(
+    user: user3,
+    name: SHIPNAMES.sample,
+    cost: (5000..100000).to_a.sample,
+    remote_photo_url: PHOTOS.sample,
+    launch_site: LAUNCH_SITES.sample
+    )
+end
+
 puts "Making some bookings for user"
 
 ofirs_ships = Spaceship.where(user: user);
@@ -68,6 +80,15 @@ ofirs_ships = Spaceship.where(user: user);
     user: user2,
     spaceship: ofirs_ships.sample,
     date: Date.today + ([0, 1, 10].sample)
+    )
+
+end
+
+3.times do
+  Booking.create!(
+    user: user,
+    spaceship: ofirs_ships.sample,
+    date: Date.today + ([0, 2, 14].sample)
     )
 
 end
