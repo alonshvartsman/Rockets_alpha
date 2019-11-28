@@ -5,7 +5,7 @@ $seatDisabled:#cc6262;
 #date_container{
   position: relative;
   bottom: 619px;
-  left: 764px;
+  left:  702px;
 }
 
 .date-form {
@@ -211,13 +211,13 @@ $seatDisabled:#cc6262;
 
 .aircraft-details-actions{
   display:flex;
-  .btn:first-child{
+  .btn-airplane:first-child{
     flex:1;
     text-align:left;
   }
 }
 
-.btn{
+.btn-airplane{
   border:0;
   background:none;
   margin:0;

@@ -88,6 +88,11 @@ a:hover {
   position: relative;
 }
 
+.card:hover {
+  transform: scale(1.03);
+  transition: all 0.2s ease-in-out;
+}
+
 .card-image img {
   height: 180px;
   width: 100%;
