@@ -1,5 +1,22 @@
 $color: #7900FE;
 
+.rocketshipbutton a {
+  color: #7900FE;
+  &:after {
+    color:white;
+  }
+  &:before {
+  color:white;
+  }
+  &:hover {
+    color:white;
+    &:before {
+      color:white;
+    }
+  }
+}
+
+
 .rocketshipbutton {
   display: inline-block;
   padding: .75rem 1.25rem;
@@ -21,6 +38,7 @@ $color: #7900FE;
     left: 0;
     width: 100%;
     height: 100%;
+    color:white;
     background-color: white;
     border-radius: 10rem;
     z-index: -2;
@@ -32,7 +50,8 @@ $color: #7900FE;
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: darken(pink, 15%);
+    background-color: #BD1EEB;
+    color:white;
     transition: all .3s;
     border-radius: 10rem;
     z-index: -1;
